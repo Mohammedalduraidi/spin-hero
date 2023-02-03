@@ -3,20 +3,27 @@ import { createTheme, responsiveFontSizes } from "@mui/material";
 const theme = createTheme({
   palette: {
     type: "light",
+
+    default: {
+      light: "#FFF",
+      main: "#FFF",
+      dark: "#FFF",
+      contrastText: "#0d0d0d",
+    },
     primary: {
-      light: "#e60c14",
-      main: "#e60c14",
-      dark: "#e60c14",
+      light: "#E50914",
+      main: "#E50914",
+      dark: "#E50914",
       contrastText: "#fff",
     },
     secondary: {
-      light: "#0d0d0d",
-      main: "#0d0d0d",
-      dark: "#0d0d0d",
-      contrastText: "#000",
+      light: "#586977",
+      main: "#586977",
+      dark: "#586977",
+      contrastText: "#fff",
     },
     background: {
-      paper: "#fff",
+      paper: "#0d0d0d",
       default: "#F7F7F7",
     },
   },
