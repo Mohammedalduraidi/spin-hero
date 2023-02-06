@@ -5,7 +5,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import { useNavigate } from "react-router-dom";
 
 export default function SimpleBottomNavigation() {
-  const [value, setValue] = useState("movies");
+  const [value, setValue] = useState("characters");
   const navigate = useNavigate();
 
   const isActive = (currentValue) => {
@@ -24,12 +24,12 @@ export default function SimpleBottomNavigation() {
     >
       <BottomNavigation value={value} onChange={handleChange} showLabels>
         <BottomNavigationAction
-          label="Movies"
-          value={"movies"}
+          label="characters"
+          value={"characters"}
           icon={
-            <MovieIcon color={isActive("movies") ? "primary" : "default"} />
+            <MovieIcon color={isActive("characters") ? "primary" : "default"} />
           }
-          sx={{ color: isActive("movies") ? "inherit" : "#ffff" }}
+          sx={{ color: isActive("characters") ? "inherit" : "#fff" }}
         />
 
         <BottomNavigationAction
@@ -38,7 +38,7 @@ export default function SimpleBottomNavigation() {
           icon={
             <SearchIcon color={isActive("search") ? "primary" : "default"} />
           }
-          sx={{ color: isActive("search") ? "inherit" : "#ffff" }}
+          sx={{ color: isActive("search") ? "inherit" : "#fff" }}
         />
       </BottomNavigation>
     </Paper>
