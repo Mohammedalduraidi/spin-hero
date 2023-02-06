@@ -9,25 +9,40 @@ import AppState from "context/appContext";
 import Header from "components/header/index";
 import BottomNavigation from "components/mainNav/index";
 import Loading from "components/loading/index";
-import Movies from "pages/movies/index";
+import Characters from "pages/characters/index";
 import Search from "pages/search/index";
+import CharacterDetails from "pages/characters/details/index";
 
 function App() {
-  const { height, width, headerHeight } = useWindowDimensions();
+  const { height, width } = useWindowDimensions();
   return (
     <ThemeProvider theme={theme}>
       <AppState>
         <BrowserRouter>
-          <div style={{ height: headerHeight, width }}>
-            <Header />
-          </div>
-          <div style={{ height, width }} className="app">
+          <Header />
+          <div
+            style={{
+              minHeight: height,
+              width,
+              height: "100%",
+              overflow: "auto",
+            }}
+            className="app"
+          >
             <Suspense fallback={<Loading />}>
               <Container className="container">
                 <Routes>
-                  <Route path="/movies" element={<Movies />} exact />
+                  <Route path="/characters" element={<Characters />} exact />
                   <Route path="/search" element={<Search />} exact />
-                  <Route path="*" element={<Navigate to="/movies" replace />} />
+                  <Route
+                    path="/characters/:characterId/character/:characterName"
+                    element={<CharacterDetails />}
+                    exact
+                  />
+                  <Route
+                    path="*"
+                    element={<Navigate to="/characters" replace />}
+                  />
                 </Routes>
               </Container>
             </Suspense>
