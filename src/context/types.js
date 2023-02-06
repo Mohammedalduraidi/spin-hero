@@ -1,0 +1,4 @@
+export const PAGINATION = "PAGINATION";
+export const RESET_PAGINATION = "RESET_PAGINATION";
+export const APP_LOADER = "APP_LOADER";
+export const GET_CHARACTER = "GET_CHARACTER";
