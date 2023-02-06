@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 
 const useWindowDimensions = () => {
-  const headerHeight = 55; // px
+  const headerHeight = 100; // px
   const navHeight = 56; //px
-  const subtractedHeight = headerHeight + navHeight;
+  const subtractedHeight = navHeight;
   const hasWindow = typeof window !== "undefined";
   function getWindowDimensions() {
     const width = hasWindow ? window.innerWidth : null;
@@ -29,7 +29,7 @@ const useWindowDimensions = () => {
       window.addEventListener("resize", handleResize);
       return () => window.removeEventListener("resize", handleResize);
     }
-  }, [hasWindow, subtractedHeight]);
+  }, [hasWindow]);
 
   return windowDimensions;
 };
