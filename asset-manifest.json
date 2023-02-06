@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/spin-hero/static/css/main.0dafd40b.css",
+    "main.js": "/spin-hero/static/js/main.fdfc6718.js",
+    "static/js/787.a3b21f96.chunk.js": "/spin-hero/static/js/787.a3b21f96.chunk.js",
+    "index.html": "/spin-hero/index.html",
+    "main.0dafd40b.css.map": "/spin-hero/static/css/main.0dafd40b.css.map",
+    "main.fdfc6718.js.map": "/spin-hero/static/js/main.fdfc6718.js.map",
+    "787.a3b21f96.chunk.js.map": "/spin-hero/static/js/787.a3b21f96.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0dafd40b.css",
+    "static/js/main.fdfc6718.js"
+  ]
+}
