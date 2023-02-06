@@ -39,7 +39,6 @@ const AppState = ({ children }) => {
     const whereCriteria = { comics: comicsId };
     const result = await fetchCharacterByCriteria(whereCriteria);
     counter++;
-    console.log({ counter, comicsId });
     return result.length > 0 ? true : generateRandomMovie(comics);
   };
 
